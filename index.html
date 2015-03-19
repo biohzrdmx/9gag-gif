@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9GAG GifPlz</title>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>9GAG GifPlz</h2>
+		<p>9GAG now loads GIFs as MP4 files, so they load faster than ever. That also means, you can not longer save those sweet memes, right?</p>
+		<p><strong>Wrong!</strong> With this little bookmarklet you'll get a button to view the original GIF.</p>
+		<p>Just drag this to your bookmarks toolbar:</p>
+		<div class="well">
+			<div class="alert alert-info"><strong>Disclaimer:</strong> You are using this at your own risk, I might not be liable for any damages caused by this little script combined with human stupidity.</div>
+			<a href="javascript:(function($){$('video').each(function(){var el = $(this), parent = el.closest('.post-container'), button = $('<a href=\'#\' class=\'btn btn-le-gif\' target=\'_blank\'>Get Le Gif</a>'); if (!$) {alert('No jQuery, can\'t continue'); return; } if ( parent.next('.btn-le-gif').length ) return; button.css({ width: 458, marginTop: 10 }); button.attr('href', el.attr('poster').replace(/s\.(jpg|gif|png)/i, 'sa.gif')); parent.after(button); }); })(jQuery);" class="btn btn-primary" title="GifzPls">9GAG: GifzPls</a>
+		</div>
+		<p>It should look like this:</p>
+		<p><img src="images/bookmarklet.png" alt="" class="img-responsive"></p>
+		<p>Then proceed to <a href="http://9gag.com/gif" target="_blank">9gag.com/gif</a> and click on the bookmarklet:</p>
+		<p><img src="images/before-after.png" alt="" class="img-responsive"></p>
+		<h3>Profit!</h3>
+		<p>Click the button and the GIF version will open in a new tab allowing you to save it</p>
+		<hr>
+		<h2>FAQ</h2>
+		<h3>Is this a virus?</h3>
+		<p>Nope, this is not a virus, in fact, you may check the original source code if you like:</p>
+		<pre>(function($){
+  $('video').each(function(){
+    var el = $(this),
+        parent = el.closest('.post-container'),
+        button = $('&lt;a href=\'#\' class=\'btn btn-le-gif\' target=\'_blank\'&gt;Get Le Gif&lt;/a&gt;');
+    if (!$) {
+        alert('No jQuery, can\'t continue');
+        return;
+    }
+    if ( parent.next('.btn-le-gif').length ) return;
+    button.css({ width: 458, marginTop: 10 });
+    button.attr('href', el.attr('poster').replace(/s\.(jpg|gif|png)/i, 'sa.gif'));
+    parent.after(button);
+  });
+})(jQuery);</pre>
+		<h3>This is not working, why?</h3>
+		<p>Are you on the 9GAG.com site? if so, are you on the GIF section? If so, are you on a computer with a decent browser?</p>
+		<p>9GAG might change, so this may not work in the future...</p>
+		<h3>Does this work on mobile phones/tables?</h3>
+		<p>I don't know!</p>
+		<h3>I used your bookmarklet and my computer dieded, why?</h3>
+		<p>Maybe you've been watching too much p0rn</p>
+		<h3>What is love?</h3>
+		<p>Baby don't hurt me</p>
+		<br>
+		<br>
+		<p class="text-center text-muted"><small>Made with <i class="fa fa-heart"></i> in Mexico City</small></p>
+		<br>
+		<br>
+	</div>
+</body>
+</html>
